@@ -4,7 +4,6 @@
     <string name="app_name">Legacy</string>
     <string name="title_activity_creative">Creative</string>
     <string name="title_activity_family">Family</string>
-
     <string name="action_settings">Settings</string>
     <string name="fam_title2">One sim has 10 kids</string>
     <string name="hello_world">Hello World</string>
@@ -40,5 +39,6 @@
         <item>@drawable/ic_launcher</item>
     </array>
 
+    <string name="title_activity_fortune">FortuneActivity</string>
 
 </resources>

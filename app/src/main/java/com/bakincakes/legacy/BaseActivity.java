@@ -142,16 +142,19 @@ public class BaseActivity extends ActionBarActivity {
     private void displayView(int position) {
 
         switch (position) {
+            //Home
             case 0:
                 Intent intent = new Intent(this, HomeActivity.class);
                 startActivity(intent);
                 finish();// finishes the current activity
                 break;
+            //Family
             case 1:
                 Intent intent1 = new Intent(this, FamilyActivity.class);
                 startActivity(intent1);
                 finish();// finishes the current activity
                 break;
+            //Creative
             case 2:
                 Intent intent2 = new Intent(this, CreativeActivity.class);
                 startActivity(intent2);
@@ -172,6 +175,11 @@ public class BaseActivity extends ActionBarActivity {
             // startActivity(intent5);
             // finish();
             // break;
+            case 6:
+                Intent intent6 = new Intent(this, FortuneActivity.class);
+                startActivity(intent6);
+                finish();
+                break;
             default:
                 break;
         }

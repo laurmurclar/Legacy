@@ -20,7 +20,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
 
-        <!-- Home-->
+        <!-- Home -->
         <activity
             android:name=".HomeActivity"
             android:label="@string/app_name" >
@@ -31,17 +31,19 @@
             </intent-filter>
         </activity>
 
-        <!-- Family-->
+        <!-- Family -->
         <activity
             android:name=".FamilyActivity"
-            android:label="@string/title_activity_family"
-        />
+            android:label="@string/title_activity_family" />
 
-        <!--Creative -->
+        <!-- Creative -->
         <activity
             android:name=".CreativeActivity"
-            android:label="@string/title_activity_creative"
-        />
+            android:label="@string/title_activity_creative" />
+        <activity
+            android:name=".FortuneActivity"
+            android:label="@string/title_activity_fortune" >
+        </activity>
     </application>
 
 </manifest>
