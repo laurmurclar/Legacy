@@ -41,5 +41,7 @@
 
     <string name="title_activity_fortune">FortuneActivity</string>
     <string name="title_activity_food">FoodActivity</string>
+    <string name="welcome">Welcome to the Tracker!</string>
+    <string name="score">Score:</string>
 
 </resources>

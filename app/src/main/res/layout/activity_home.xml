@@ -14,16 +14,36 @@
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:gravity="center">
 
-            <TextView
-                android:id="@+id/textView1"
+
+            <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="This is the Home Activity."
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:layout_height="250dp"
+                android:src="@drawable/plumbob"/>
+
+            <TextView android:text="@string/welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:gravity="center"/>
+
+            <TextView android:text="@string/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="35sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:text="0"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not sure yet"
+                />
         </LinearLayout>
     </FrameLayout>
 
