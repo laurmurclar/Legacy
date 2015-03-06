@@ -8,22 +8,33 @@
     <string-array name="nav_drawer_items">
         <item>Home</item>
         <item>Family</item>
-        <!-- <item>Third</item>
-        <item>Fourth</item>
-        <item>Fifth</item>
-        <item>Sixth</item> -->
+        <item>Creative</item>
+        <item>Love</item>
+        <item>Nature</item>
+
+        <item>Deviance</item>
+        <item>Fortune</item>
+        <item>Food</item>
+        <item>Athletic</item>
+        <item>Popularity</item>
+
+        <item>Penalties</item>
+        <item>Family Settings</item>
     </string-array>
 
     <array name="nav_drawer_icons">
         <item>@drawable/ic_launcher</item>
         <item>@drawable/ic_launcher</item>
-        <!--
         <item>@drawable/ic_launcher</item>
         <item>@drawable/ic_launcher</item>
         <item>@drawable/ic_launcher</item>
         <item>@drawable/ic_launcher</item>
-        -->
-
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
     </array>
 
 </resources>

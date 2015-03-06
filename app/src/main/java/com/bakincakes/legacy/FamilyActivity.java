@@ -10,7 +10,7 @@ public class FamilyActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_family);
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items); // load
         // titles
         // from

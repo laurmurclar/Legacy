@@ -11,21 +11,33 @@
         android:layout_height="match_parent" >
 
         <!-- Add content here -->
-
         <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/fam_title1"
                 android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="This is the Second Activity."
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:layout_height="wrap_content"
+                android:text="Nine heirs reach YA"/>
+            <CheckBox
+                android:id="@+id/fam_cb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample"/>
+            <CheckBox
+                android:id="@+id/fam_cb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample"/>
+            <CheckBox
+                android:id="@+id/fam_cb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample"/>
         </LinearLayout>
     </FrameLayout>
 
