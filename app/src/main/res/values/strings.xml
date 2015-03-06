@@ -40,5 +40,6 @@
     </array>
 
     <string name="title_activity_fortune">FortuneActivity</string>
+    <string name="title_activity_food">FoodActivity</string>
 
 </resources>

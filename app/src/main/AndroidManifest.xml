@@ -44,6 +44,10 @@
             android:name=".FortuneActivity"
             android:label="@string/title_activity_fortune" >
         </activity>
+        <activity
+            android:name=".FoodActivity"
+            android:label="@string/title_activity_food" >
+        </activity>
     </application>
 
 </manifest>

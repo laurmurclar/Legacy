@@ -160,26 +160,60 @@ public class BaseActivity extends ActionBarActivity {
                 startActivity(intent2);
                 finish();
                 break;
+            //Love
             // case 3:
             // Intent intent3 = new Intent(this, fourth.class);
             // startActivity(intent3);
             // finish();
             // break;
+            //Nature
             // case 4:
             // Intent intent4 = new Intent(this, fifth.class);
             // startActivity(intent4);
             // finish();
             // break;
+            //Deviance
             // case 5:
             // Intent intent5 = new Intent(this, sixth.class);
             // startActivity(intent5);
             // finish();
             // break;
+            //Fortune
             case 6:
                 Intent intent6 = new Intent(this, FortuneActivity.class);
                 startActivity(intent6);
                 finish();
                 break;
+            //Food
+            case 7:
+                Intent intent7 = new Intent(this, FoodActivity.class);
+                startActivity(intent7);
+                finish();
+                break;
+            //Athletic
+//            case 8:
+//                Intent intent8 = new Intent(this, AthleticActivity.class);
+//                startActivity(intent8);
+//                finish();
+//                break;
+            //Popularity
+//            case 9:
+//                Intent intent9 = new Intent(this, PopularityActivity.class);
+//                startActivity(intent9);
+//                finish();
+//                break;
+            //Penalties
+//            case 10:
+//                Intent intent10 = new Intent(this, PenaltiesActivity.class);
+//                startActivity(intent10);
+//                finish();
+//                break;
+            //Family Settings
+//            case 11:
+//                Intent intent11 = new Intent(this, FamilySettingsActivity.class);
+//                startActivity(intent11);
+//                finish();
+//                break;
             default:
                 break;
         }

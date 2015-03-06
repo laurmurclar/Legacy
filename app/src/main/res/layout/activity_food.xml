@@ -1,0 +1,91 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- The main content view -->
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!-- Add content here -->
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/foo_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="complete each of the following:"/>
+            <CheckBox
+                android:id="@+id/foo_cb0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="most expensive fridge and stove fully upgraded"/>
+            <CheckBox
+                android:id="@+id/foo_cb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="make a Perfect baked alaska"/>
+            <CheckBox
+                android:id="@+id/foo_cb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="single sim maxes the cooking, gourmet cooking and mixology skills"/>
+            <CheckBox
+                android:id="@+id/foo_cb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="complete both food aspirations in a single gen"/>
+            <CheckBox
+                android:id="@+id/foo_cb4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="reach the top of both food career branches"/>
+            <CheckBox
+                android:id="@+id/foo_cb5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sim gets fat from your family's cooking"/>
+            <CheckBox
+                android:id="@+id/foo_cb6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="have 6 sims eating at the table (family and/or guests)"/>
+            <CheckBox
+                android:id="@+id/foo_cb7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cook a meal with at least 2 Perfect fresh ingredients"/>
+            <CheckBox
+                android:id="@+id/foo_cb8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="serve Perfect food OR drink during a single date"/>
+            <CheckBox
+                android:id="@+id/foo_cb9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="serve Perfect food AND drink during a party"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- The navigation drawer -->
+
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#d6d6d6"
+        android:choiceMode="singleChoice"
+        android:divider="#e5e5e5"
+        android:dividerHeight="1dp" />
+
+</android.support.v4.widget.DrawerLayout>
