@@ -22,7 +22,8 @@
                 android:id="@+id/cre_title1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Heir and Spouse Memorialised"/>
+                android:text="Heir and Spouse Memorialised"
+                android:paddingBottom="10dp"/>
             <CheckBox
                 android:id="@+id/cre_cb0"
                 android:layout_width="wrap_content"
@@ -72,8 +73,9 @@
                 android:id="@+id/cre_title2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cre_title2"/>
-            <!-- For "One Sim has 10 kids"-->
+                android:text="@string/cre_title2"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"/>
             <CheckBox
                 android:id="@+id/cre_cb9"
                 android:layout_width="wrap_content"

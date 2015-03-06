@@ -22,7 +22,8 @@
                 android:id="@+id/for_title1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Household worth"/>
+                android:text="Household worth"
+                android:paddingBottom="10dp"/>
             <CheckBox
                 android:id="@+id/for_cb0"
                 android:layout_width="wrap_content"
