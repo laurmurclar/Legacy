@@ -24,17 +24,17 @@
                 android:layout_height="wrap_content"
                 android:text="Nine heirs reach YA"/>
             <CheckBox
+                android:id="@+id/fam_cb0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample"/>
+            <CheckBox
                 android:id="@+id/fam_cb1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sample"/>
             <CheckBox
                 android:id="@+id/fam_cb2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sample"/>
-            <CheckBox
-                android:id="@+id/fam_cb3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sample"/>
