@@ -38,6 +38,46 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sample"/>
+            <CheckBox
+                android:id="@+id/fam_cb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample"/>
+            <CheckBox
+                android:id="@+id/fam_cb4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample"/>
+            <CheckBox
+                android:id="@+id/fam_cb5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample"/>
+            <CheckBox
+                android:id="@+id/fam_cb6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample"/>
+            <CheckBox
+                android:id="@+id/fam_cb7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample"/>
+            <CheckBox
+                android:id="@+id/fam_cb8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fam_title2"/>
+            <!-- For "One Sim has 10 kids"-->
+            <CheckBox
+                android:id="@+id/fam_cb9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample"/>
         </LinearLayout>
     </FrameLayout>
 

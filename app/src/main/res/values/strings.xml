@@ -4,6 +4,7 @@
     <string name="app_name">Legacy</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="fam_title2">One sim has 10 kids</string>
 
     <string-array name="nav_drawer_items">
         <item>Home</item>
