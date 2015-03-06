@@ -34,10 +34,10 @@ public class BaseActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer);
-        // if (savedInstanceState == null) {
-        // // on first time display view for first nav item
-        // // displayView(0);
-        // }
+         //if (savedInstanceState == null) {
+         // on first time display view for first nav item
+          //   displayView(0);
+         //}
     }
 
     public void set(String[] navMenuTitles, TypedArray navMenuIcons) {
@@ -70,7 +70,7 @@ public class BaseActivity extends ActionBarActivity {
         // enabling action bar app icon and behaving it as toggle button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-        // getSupportActionBar().setIcon(R.drawable.ic_drawer);
+        getSupportActionBar().setIcon(R.drawable.ic_drawer);
 
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
                 R.drawable.ic_drawer, // nav menu toggle icon
@@ -152,11 +152,11 @@ public class BaseActivity extends ActionBarActivity {
                 startActivity(intent1);
                 finish();// finishes the current activity
                 break;
-            // case 2:
-            // Intent intent2 = new Intent(this, third.class);
-            // startActivity(intent2);
-            // finish();
-            // break;
+            case 2:
+                Intent intent2 = new Intent(this, CreativeActivity.class);
+                startActivity(intent2);
+                finish();
+                break;
             // case 3:
             // Intent intent3 = new Intent(this, fourth.class);
             // startActivity(intent3);
@@ -182,11 +182,6 @@ public class BaseActivity extends ActionBarActivity {
         mDrawerLayout.closeDrawer(mDrawerList);
     }
 
-    @Override
-    public void setTitle(CharSequence title) {
-        mTitle = title;
-        getActionBar().setTitle(mTitle);
-    }
 
     /**
      * When using the ActionBarDrawerToggle, you must call it during
