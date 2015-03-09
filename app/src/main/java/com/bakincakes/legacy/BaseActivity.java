@@ -3,9 +3,11 @@ package com.bakincakes.legacy;
 import java.util.ArrayList;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -191,11 +193,11 @@ public class BaseActivity extends ActionBarActivity {
                 finish();
                 break;
             //Athletic
-//            case 8:
-//                Intent intent8 = new Intent(this, AthleticActivity.class);
-//                startActivity(intent8);
-//                finish();
-//                break;
+            case 8:
+                Intent intent8 = new Intent(this, AthleticActivity.class);
+                startActivity(intent8);
+                finish();
+                break;
             //Popularity
             case 9:
                 Intent intent9 = new Intent(this, PopularityActivity.class);
@@ -242,5 +244,16 @@ public class BaseActivity extends ActionBarActivity {
         super.onConfigurationChanged(newConfig);
         // Pass any configuration change to the drawer toggls
         mDrawerToggle.onConfigurationChanged(newConfig);
+    }
+
+    public boolean getPref(String key){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        return sharedPreferences.getBoolean(key, false);
+    }
+    public void savePref(String key, boolean value){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(key, value);
+        editor.commit();
     }
 }

@@ -7,7 +7,6 @@
     <string name="title_activity_fortune">Fortune</string>
     <string name="title_activity_food">Food</string>
     <string name="title_activity_popularity">Popularity</string>
-
     <string name="action_settings">Settings</string>
     <string name="fam_title2">One sim has 10 kids</string>
     <string name="hello_world">Hello World</string>
@@ -45,6 +44,6 @@
         <item>@drawable/ic_launcher</item>
     </array>
 
-
+    <string name="title_activity_athletic">AthleticActivity</string>
 
 </resources>

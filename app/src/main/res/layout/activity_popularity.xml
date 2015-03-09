@@ -36,14 +36,30 @@
                     android:layout_gravity="center">
 
                     <!-- Gold Medal -->
-                    <TextView
-                        android:id="@+id/pop_gold_count"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="7"
-                        android:textSize="40sp"
-                        android:gravity="center"
-                        android:background="@drawable/goldmedal"/>
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/pop_gold_neg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"/>
+                        <TextView
+                            android:id="@+id/pop_gold_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7"
+                            android:textSize="40sp"
+                            android:gravity="center"
+                            android:background="@drawable/goldmedal"/>
+                        <Button
+                            android:id="@+id/pop_gold_pos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+"/>
+                    </LinearLayout>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -51,14 +67,29 @@
                         android:paddingBottom="20dp"/>
 
                     <!-- Silver Medal -->
-                    <TextView
-                        android:id="@+id/pop_silver_count"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="12"
-                        android:textSize="40sp"
-                        android:gravity="center"
-                        android:background="@drawable/silvermedal"/>
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/pop_silver_neg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"/>
+                        <TextView
+                            android:id="@+id/pop_silver_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12"
+                            android:textSize="40sp"
+                            android:gravity="center"
+                            android:background="@drawable/silvermedal"/>
+                        <Button
+                            android:id="@+id/pop_silver_pos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+"/>
+                    </LinearLayout>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -66,14 +97,29 @@
                         android:paddingBottom="20dp"/>
 
                     <!-- Bronze Medal -->
-                    <TextView
-                        android:id="@+id/pop_bronze_count"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="9"
-                        android:textSize="40sp"
-                        android:gravity="center"
-                        android:background="@drawable/bronzemedal"/>
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/pop_bronze_neg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"/>
+                        <TextView
+                            android:id="@+id/pop_bronze_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9"
+                            android:textSize="40sp"
+                            android:gravity="center"
+                            android:background="@drawable/bronzemedal"/>
+                        <Button
+                            android:id="@+id/pop_bronze_pos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+"/>
+                        </LinearLayout>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -82,11 +128,74 @@
 
                      <!-- Total Stuff (set by java variables)-->
                     <TextView
+                        android:id="@+id/pop_total_count"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Total Medal Points: "
                         android:textSize="30sp"/>
                 </LinearLayout>
+
+                <!-- Checkboxy stuff -->
+                <TextView
+                    android:id="@+id/pop_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Points earned as above"/>
+                <CheckBox
+                    android:id="@+id/pop_cb0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20 medal points"/>
+                <CheckBox
+                    android:id="@+id/pop_cb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30 medal points"/>
+                <CheckBox
+                    android:id="@+id/pop_cb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="60 medal points"/>
+                <CheckBox
+                    android:id="@+id/pop_cb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="90 medal points"/>
+                <CheckBox
+                    android:id="@+id/pop_cb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="150 medal points"/>
+                <CheckBox
+                    android:id="@+id/pop_cb5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200 medal points"/>
+                <CheckBox
+                    android:id="@+id/pop_cb6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="400 medal points"/>
+                <CheckBox
+                    android:id="@+id/pop_cb7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="600 medal points"/>
+                <CheckBox
+                    android:id="@+id/pop_cb8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000 medal points"/>
+                <TextView
+                    android:id="@+id/pop_title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="One sim gets gold medals in all parties and a date"/>
+                <CheckBox
+                    android:id="@+id/pop_cb9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="date, dinner, house, birthday, wedding, incognito costume, b and w"/>
             </LinearLayout>
         </ScrollView>
     </FrameLayout>

@@ -1,14 +1,15 @@
 package com.bakincakes.legacy;
 
-import android.content.SharedPreferences;
 import android.content.res.TypedArray;
-import android.preference.PreferenceManager;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
 
-public class FortuneActivity extends BaseActivity {
+public class AthleticActivity extends BaseActivity {
     private String[] navMenuTitles;
     private TypedArray navMenuIcons;
     private int NCHECKBOX = 10;
@@ -17,7 +18,8 @@ public class FortuneActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fortune);
+        setContentView(R.layout.activity_athletic);
+
 
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items); // load
         // titles from strings.xml
@@ -26,8 +28,7 @@ public class FortuneActivity extends BaseActivity {
                 .obtainTypedArray(R.array.nav_drawer_icons);// load icons from strings.xml
 
         set(navMenuTitles, navMenuIcons);
-        //set the checkboxes
-        final String cbKey = "for_cb";
+        final String cbKey = "ath_cb";
         for (int i = 0; i < checkboxes.length; i++) {
             checkboxes[i] = (CheckBox) findViewById(getResources().getIdentifier(cbKey + i, "id", getPackageName()));
             checkboxes[i].setChecked(getPref(cbKey + i));
@@ -35,35 +36,35 @@ public class FortuneActivity extends BaseActivity {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     switch (buttonView.getId()) {
-                        case R.id.for_cb0:
-                            savePref("for_cb0", isChecked);
+                        case R.id.ath_cb0:
+                            savePref("ath_cb0", isChecked);
                             break;
-                        case R.id.for_cb1:
-                            savePref("for_cb1", isChecked);
+                        case R.id.ath_cb1:
+                            savePref("ath_cb1", isChecked);
                             break;
-                        case R.id.for_cb2:
-                            savePref("for_cb2", isChecked);
+                        case R.id.ath_cb2:
+                            savePref("ath_cb2", isChecked);
                             break;
-                        case R.id.for_cb3:
-                            savePref("for_cb3", isChecked);
+                        case R.id.ath_cb3:
+                            savePref("ath_cb3", isChecked);
                             break;
-                        case R.id.for_cb4:
-                            savePref("for_cb4", isChecked);
+                        case R.id.ath_cb4:
+                            savePref("ath_cb4", isChecked);
                             break;
-                        case R.id.for_cb5:
-                            savePref("for_cb5", isChecked);
+                        case R.id.ath_cb5:
+                            savePref("ath_cb5", isChecked);
                             break;
-                        case R.id.for_cb6:
-                            savePref("for_cb6", isChecked);
+                        case R.id.ath_cb6:
+                            savePref("ath_cb6", isChecked);
                             break;
-                        case R.id.for_cb7:
-                            savePref("for_cb7", isChecked);
+                        case R.id.ath_cb7:
+                            savePref("ath_cb7", isChecked);
                             break;
-                        case R.id.for_cb8:
-                            savePref("for_cb8", isChecked);
+                        case R.id.ath_cb8:
+                            savePref("ath_cb8", isChecked);
                             break;
-                        case R.id.for_cb9:
-                            savePref("for_cb9", isChecked);
+                        case R.id.ath_cb9:
+                            savePref("ath_cb9", isChecked);
                             break;
                         default:
                             break;

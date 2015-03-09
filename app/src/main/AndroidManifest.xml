@@ -52,6 +52,10 @@
             android:name=".PopularityActivity"
             android:label="@string/title_activity_popularity" >
         </activity>
+        <activity
+            android:name=".AthleticActivity"
+            android:label="@string/title_activity_athletic" >
+        </activity>
     </application>
 
 </manifest>

@@ -75,16 +75,4 @@ public class FoodActivity extends BaseActivity {
             });
         }
     }
-
-
-    private boolean getPref(String key){
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        return sharedPreferences.getBoolean(key, false);
-    }
-    private void savePref(String key, boolean value){
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean(key, value);
-        editor.commit();
-    }
 }
