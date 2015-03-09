@@ -60,6 +60,26 @@
             android:name=".KnowledgeActivity"
             android:label="@string/title_activity_knowledge" >
         </activity>
+        <activity
+            android:name=".LoveActivity"
+            android:label="@string/title_activity_love" >
+        </activity>
+        <activity
+            android:name=".DevianceActivity"
+            android:label="@string/title_activity_deviance" >
+        </activity>
+        <activity
+            android:name=".NatureActivity"
+            android:label="@string/title_activity_nature" >
+        </activity>
+        <activity
+            android:name=".PenaltiesActivity"
+            android:label="@string/title_activity_penalties" >
+        </activity>
+        <activity
+            android:name=".FamilySettingsActivity"
+            android:label="@string/title_activity_family_settings" >
+        </activity>
     </application>
 
 </manifest>

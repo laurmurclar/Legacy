@@ -163,59 +163,65 @@ public class BaseActivity extends ActionBarActivity {
                 finish();
                 break;
             //Love
-            // case 3:
-            // Intent intent3 = new Intent(this, fourth.class);
-            // startActivity(intent3);
-            // finish();
-            // break;
+            case 3:
+                Intent intent3 = new Intent(this, LoveActivity.class);
+                startActivity(intent3);
+                finish();
+                break;
             //Knowledge
             case 4:
-            Intent intent4 = new Intent(this, KnowledgeActivity.class);
-            startActivity(intent4);
-            finish();
-            break;
+                Intent intent4 = new Intent(this, KnowledgeActivity.class);
+                startActivity(intent4);
+                finish();
+                break;
+            //Nature
+            case 5:
+                Intent intent5 = new Intent(this, NatureActivity.class);
+                startActivity(intent5);
+                finish();
+                break;
             //Deviance
-            // case 6:
-            // Intent intent5 = new Intent(this, sixth.class);
-            // startActivity(intent5);
-            // finish();
-            // break;
+            case 6:
+                Intent intent6 = new Intent(this, DevianceActivity.class);
+                startActivity(intent6);
+                finish();
+                break;
             //Fortune
             case 7:
-                Intent intent6 = new Intent(this, FortuneActivity.class);
-                startActivity(intent6);
+                Intent intent7 = new Intent(this, FortuneActivity.class);
+                startActivity(intent7);
                 finish();
                 break;
             //Food
             case 8:
-                Intent intent7 = new Intent(this, FoodActivity.class);
-                startActivity(intent7);
+                Intent intent8 = new Intent(this, FoodActivity.class);
+                startActivity(intent8);
                 finish();
                 break;
             //Athletic
             case 9:
-                Intent intent8 = new Intent(this, AthleticActivity.class);
-                startActivity(intent8);
+                Intent intent9 = new Intent(this, AthleticActivity.class);
+                startActivity(intent9);
                 finish();
                 break;
             //Popularity
             case 10:
-                Intent intent9 = new Intent(this, PopularityActivity.class);
-                startActivity(intent9);
+                Intent intent10 = new Intent(this, PopularityActivity.class);
+                startActivity(intent10);
                 finish();
                 break;
             //Penalties
-//            case 11:
-//                Intent intent10 = new Intent(this, PenaltiesActivity.class);
-//                startActivity(intent10);
-//                finish();
-//                break;
+            case 11:
+                Intent intent11 = new Intent(this, PenaltiesActivity.class);
+                startActivity(intent11);
+                finish();
+                break;
             //Family Settings
-//            case 12:
-//                Intent intent11 = new Intent(this, FamilySettingsActivity.class);
-//                startActivity(intent11);
-//                finish();
-//                break;
+            case 12:
+                Intent intent12 = new Intent(this, FamilySettingsActivity.class);
+                startActivity(intent12);
+                finish();
+                break;
             default:
                 break;
         }

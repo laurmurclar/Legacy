@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Screen Titles -->
     <string name="app_name">Legacy</string>
     <string name="title_activity_creative">Creative</string>
     <string name="title_activity_family">Family</string>
@@ -9,6 +10,11 @@
     <string name="title_activity_popularity">Popularity</string>
     <string name="title_activity_athletic">Athletic</string>
     <string name="title_activity_knowledge">Knowledge</string>
+    <string name="title_activity_love">Love</string>
+    <string name="title_activity_deviance">Deviance</string>
+    <string name="title_activity_nature">Nature</string>
+    <string name="title_activity_penalties">Penalties</string>
+    <string name="title_activity_family_settings">Family Settings</string>
 
 
     <string name="action_settings">Settings</string>
@@ -19,19 +25,19 @@
     <string name="score">Score:</string>
 
     <string-array name="nav_drawer_items">
-        <item>Home</item><!--0-->
-        <item>Family</item><!--1-->
-        <item>Creative</item><!--2-->
-        <item>Love</item><!--3-->
-        <item>Knowledge</item><!--4-->
-        <item>Nature</item><!--5-->
-        <item>Deviance</item><!--6-->
-        <item>Fortune</item><!--7-->
-        <item>Food</item><!--8-->
-        <item>Athletic</item><!--9-->
-        <item>Popularity</item><!--10-->
-        <item>Penalties</item><!--11-->
-        <item>Family Settings</item><!--12-->
+        <item>Home</item> <!-- 0 -->
+        <item>Family</item> <!-- 1 -->
+        <item>Creative</item> <!-- 2 -->
+        <item>Love</item> <!-- 3 -->
+        <item>Knowledge</item> <!-- 4 -->
+        <item>Nature</item> <!-- 5 -->
+        <item>Deviance</item> <!-- 6 -->
+        <item>Fortune</item> <!-- 7 -->
+        <item>Food</item> <!-- 8 -->
+        <item>Athletic</item> <!-- 9 -->
+        <item>Popularity</item> <!-- 10 -->
+        <item>Penalties</item> <!-- 11 -->
+        <item>Family Settings</item> <!-- 12 -->
     </string-array>
 
     <array name="nav_drawer_icons">
