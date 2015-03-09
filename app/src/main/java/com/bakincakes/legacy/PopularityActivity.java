@@ -174,18 +174,6 @@ public class PopularityActivity extends BaseActivity {
         }
     }
 
-    private int getIntPref(String key){
-       SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-       return  sharedPreferences.getInt(key, 0);
-    }
-
-    private void saveIntPref(String key, int value){
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(key, value);
-        editor.commit();
-    }
-
     private int totalMedalPoints(){
         return nBronze+(2*nSilver)+(3*nGold);
     }

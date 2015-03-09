@@ -262,4 +262,16 @@ public class BaseActivity extends ActionBarActivity {
         editor.putBoolean(key, value);
         editor.commit();
     }
+
+    public int getIntPref(String key){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        return  sharedPreferences.getInt(key, 0);
+    }
+
+    public void saveIntPref(String key, int value){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(key, value);
+        editor.commit();
+    }
 }
