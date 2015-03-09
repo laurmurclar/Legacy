@@ -4,10 +4,14 @@
     <string name="app_name">Legacy</string>
     <string name="title_activity_creative">Creative</string>
     <string name="title_activity_family">Family</string>
+    <string name="title_activity_fortune">FortuneActivity</string>
+    <string name="title_activity_food">FoodActivity</string>
     <string name="action_settings">Settings</string>
     <string name="fam_title2">One sim has 10 kids</string>
     <string name="hello_world">Hello World</string>
     <string name="cre_title2">One sim completes two creative aspirations</string>
+    <string name="welcome">Welcome to the Tracker!</string>
+    <string name="score">Score:</string>
 
     <string-array name="nav_drawer_items">
         <item>Home</item>
@@ -39,9 +43,6 @@
         <item>@drawable/ic_launcher</item>
     </array>
 
-    <string name="title_activity_fortune">FortuneActivity</string>
-    <string name="title_activity_food">FoodActivity</string>
-    <string name="welcome">Welcome to the Tracker!</string>
-    <string name="score">Score:</string>
+    <string name="title_activity_popularity">PopularityActivity</string>
 
 </resources>

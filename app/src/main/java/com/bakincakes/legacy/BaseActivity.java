@@ -197,11 +197,11 @@ public class BaseActivity extends ActionBarActivity {
 //                finish();
 //                break;
             //Popularity
-//            case 9:
-//                Intent intent9 = new Intent(this, PopularityActivity.class);
-//                startActivity(intent9);
-//                finish();
-//                break;
+            case 9:
+                Intent intent9 = new Intent(this, PopularityActivity.class);
+                startActivity(intent9);
+                finish();
+                break;
             //Penalties
 //            case 10:
 //                Intent intent10 = new Intent(this, PenaltiesActivity.class);

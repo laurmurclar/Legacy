@@ -1,0 +1,99 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- The main content view -->
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!-- Add content here -->
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                >
+
+                <TextView
+                    android:id="@+id/pop_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medal points earned for getting medals on parties and dates"
+                    android:paddingBottom="10dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <!-- Gold Medal -->
+                    <TextView
+                        android:id="@+id/pop_gold_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7"
+                        android:textSize="40sp"
+                        android:gravity="center"
+                        android:background="@drawable/goldmedal"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gold: 3pts per medal"
+                        android:paddingBottom="20dp"/>
+
+                    <!-- Silver Medal -->
+                    <TextView
+                        android:id="@+id/pop_silver_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:textSize="40sp"
+                        android:gravity="center"
+                        android:background="@drawable/silvermedal"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Silver: 2pts per medal"
+                        android:paddingBottom="20dp"/>
+
+                    <!-- Bronze Medal -->
+                    <TextView
+                        android:id="@+id/pop_bronze_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9"
+                        android:textSize="40sp"
+                        android:gravity="center"
+                        android:background="@drawable/bronzemedal"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bronze: 1pt per medal"
+                        android:paddingBottom="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <!-- The navigation drawer -->
+
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#d6d6d6"
+        android:choiceMode="singleChoice"
+        android:divider="#e5e5e5"
+        android:dividerHeight="1dp" />
+
+</android.support.v4.widget.DrawerLayout>

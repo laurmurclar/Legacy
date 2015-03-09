@@ -48,6 +48,10 @@
             android:name=".FoodActivity"
             android:label="@string/title_activity_food" >
         </activity>
+        <activity
+            android:name=".PopularityActivity"
+            android:label="@string/title_activity_popularity" >
+        </activity>
     </application>
 
 </manifest>
