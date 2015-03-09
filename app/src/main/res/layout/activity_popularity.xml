@@ -79,6 +79,13 @@
                         android:layout_height="wrap_content"
                         android:text="Bronze: 1pt per medal"
                         android:paddingBottom="20dp"/>
+
+                     <!-- Total Stuff (set by java variables)-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Medal Points: "
+                        android:textSize="30sp"/>
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
