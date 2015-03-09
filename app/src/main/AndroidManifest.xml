@@ -56,6 +56,10 @@
             android:name=".AthleticActivity"
             android:label="@string/title_activity_athletic" >
         </activity>
+        <activity
+            android:name=".KnowledgeActivity"
+            android:label="@string/title_activity_knowledge" >
+        </activity>
     </application>
 
 </manifest>

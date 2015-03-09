@@ -7,6 +7,10 @@
     <string name="title_activity_fortune">Fortune</string>
     <string name="title_activity_food">Food</string>
     <string name="title_activity_popularity">Popularity</string>
+    <string name="title_activity_athletic">Athletic</string>
+    <string name="title_activity_knowledge">Knowledge</string>
+
+
     <string name="action_settings">Settings</string>
     <string name="fam_title2">One sim has 10 kids</string>
     <string name="hello_world">Hello World</string>
@@ -15,18 +19,19 @@
     <string name="score">Score:</string>
 
     <string-array name="nav_drawer_items">
-        <item>Home</item>
-        <item>Family</item>
-        <item>Creative</item>
-        <item>Love</item>
-        <item>Nature</item>
-        <item>Deviance</item>
-        <item>Fortune</item>
-        <item>Food</item>
-        <item>Athletic</item>
-        <item>Popularity</item>
-        <item>Penalties</item>
-        <item>Family Settings</item>
+        <item>Home</item><!--0-->
+        <item>Family</item><!--1-->
+        <item>Creative</item><!--2-->
+        <item>Love</item><!--3-->
+        <item>Knowledge</item><!--4-->
+        <item>Nature</item><!--5-->
+        <item>Deviance</item><!--6-->
+        <item>Fortune</item><!--7-->
+        <item>Food</item><!--8-->
+        <item>Athletic</item><!--9-->
+        <item>Popularity</item><!--10-->
+        <item>Penalties</item><!--11-->
+        <item>Family Settings</item><!--12-->
     </string-array>
 
     <array name="nav_drawer_icons">
@@ -42,8 +47,9 @@
         <item>@drawable/ic_launcher</item>
         <item>@drawable/ic_launcher</item>
         <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
     </array>
 
-    <string name="title_activity_athletic">AthleticActivity</string>
+
 
 </resources>
