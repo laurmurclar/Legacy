@@ -53,7 +53,6 @@ public class FamilySettingsActivity extends BaseActivity {
                 return false;
             }
         });
-        //TODO get keyboard to close on done. Disp hint instead of default text
 
         /*Set up Spinners - The gender spinner */
         genderSpinner = (Spinner) findViewById(R.id.fam_set_gender_spinner);
