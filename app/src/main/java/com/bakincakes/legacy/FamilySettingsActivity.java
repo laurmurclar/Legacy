@@ -49,7 +49,6 @@ public class FamilySettingsActivity extends BaseActivity {
                         (actionId == EditorInfo.IME_ACTION_SEND)||
                         (actionId == EditorInfo.IME_ACTION_SEARCH)) {
                     saveStringPref(nameEditKey, editText.getText().toString());
-                    return true;
                 }
                 return false;
             }
