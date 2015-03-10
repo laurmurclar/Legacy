@@ -274,4 +274,16 @@ public class BaseActivity extends ActionBarActivity {
         editor.putInt(key, value);
         editor.commit();
     }
+
+    public String getStringPref(String key){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        return sharedPreferences.getString(key,"Enter Text");
+    }
+
+    public void saveStringPref(String key, String value){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(key, value);
+        editor.commit();
+    }
 }

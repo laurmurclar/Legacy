@@ -15,8 +15,6 @@ import android.widget.TextView;
 public class PenaltiesActivity extends BaseActivity {
     private String[] navMenuTitles;
     private TypedArray navMenuIcons;
-    private int NCHECKBOX = 10;
-    final CheckBox[] checkboxes = new CheckBox[NCHECKBOX];
     int nPowerOff, nPlumbingOff, nKidsTaken, totalPenalties;
     TextView powerText, plumbingText, kidsTakenText, totalPenaltiesText;
     String powerOffKey = "power_off", plumbingOffKey = "plumbing_off", kidsTakenKey = "kids_taken";

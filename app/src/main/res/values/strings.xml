@@ -56,6 +56,34 @@
         <item>@drawable/ic_launcher</item>
     </array>
 
+    <string-array name="gender_law_array">
+        <item>Matriarchy</item>
+        <item>Strict Matriarchy</item>
+        <item>Patriarchy</item>
+        <item>Strict Patriarchy</item>
+        <item>Equality</item>
+        <item>Strict Equality</item>
+    </string-array>
+
+    <string-array name="bloodline_law_array">
+        <item>Strict Traditional</item>
+        <item>Traditional</item>
+        <item>Modern</item>
+        <item>Foster</item>
+        <item>Strict Foster</item>
+    </string-array>
+
+    <string-array name="heir_law_array">
+        <item>First Born</item>
+        <item>Last Born</item>
+        <item>Living Will</item>
+        <item>Merit</item>
+        <item>Strength</item>
+        <item>Random</item>
+        <item>Exemplar</item>
+        <item>Democracy</item>
+    </string-array>
+
 
 
 </resources>
