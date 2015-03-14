@@ -6,15 +6,20 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class FamilyActivity extends BaseActivity {
     private String[] navMenuTitles;
     private TypedArray navMenuIcons;
     private int NCHECKBOX = 10;
     final CheckBox[] checkboxes = new CheckBox[NCHECKBOX];
+    int famPoints;
+    String famPointsKey = "fam_points";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_family);
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items); // load
@@ -24,6 +29,9 @@ public class FamilyActivity extends BaseActivity {
                 .obtainTypedArray(R.array.nav_drawer_icons);// load icons from strings.xml
 
         set(navMenuTitles, navMenuIcons);
+        famPoints = getIntPref(famPointsKey);
+        final TextView famPointsText = (TextView) findViewById(R.id.fam_points_text);
+        famPointsText.setText("Points: "+famPoints);
         //set the checkboxes
         final String cbKey = "fam_cb";
         String cbText = "Generation ";
@@ -33,6 +41,9 @@ public class FamilyActivity extends BaseActivity {
             checkboxes[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) famPoints++;
+                    else if (famPoints > 0) famPoints--;
+                    saveIntPref(famPointsKey, famPoints);
                     switch(buttonView.getId()){
                         case R.id.fam_cb0:
                             savePref("fam_cb0",isChecked);
@@ -67,6 +78,7 @@ public class FamilyActivity extends BaseActivity {
                         default:
                             break;
                     }
+                    famPointsText.setText("Points: "+ famPoints);
                 }
             });
             if (i < 9) checkboxes[i].setText(cbText+(i+1));
@@ -75,4 +87,7 @@ public class FamilyActivity extends BaseActivity {
         //load each saved preference
     }
 
+    public int getPoints(){
+        return famPoints;
+    }
 }
