@@ -24,6 +24,7 @@ public class PopularityActivity extends BaseActivity {
     final CheckBox[] checkboxes = new CheckBox[NCHECKBOX];
     int medalPoints, nGold, nSilver, nBronze;
     TextView nGoldText, nSilverText, nBronzeText, nMedalsText;
+    final String cbKey = "pop_cb";
 
 
     @Override
@@ -128,10 +129,11 @@ public class PopularityActivity extends BaseActivity {
         });
 
         //set the checkboxes
-        final String cbKey = "pop_cb";
+
         for (int i = 0; i < checkboxes.length; i++) {
             checkboxes[i] = (CheckBox) findViewById(getResources().getIdentifier(cbKey + i, "id", getPackageName()));
             checkboxes[i].setChecked(getPref(cbKey + i));
+            if (i < checkboxes.length-1) checkboxes[i].setClickable(false);
             checkboxes[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -181,6 +183,26 @@ public class PopularityActivity extends BaseActivity {
     private void updateTotal(){
         medalPoints = totalMedalPoints();
         nMedalsText.setText("Total Medal Points: "+medalPoints);
+        int setUpTo = -1;
+        if (medalPoints >= 1000) setUpTo = 8;
+        else if (medalPoints >= 600) setUpTo = 7;
+        else if (medalPoints >= 400) setUpTo = 6;
+        else if (medalPoints >= 200) setUpTo = 5;
+        else if (medalPoints >= 150) setUpTo = 4;
+        else if (medalPoints >= 90) setUpTo = 3;
+        else if (medalPoints >= 60) setUpTo = 2;
+        else if (medalPoints >= 30) setUpTo = 1;
+        else if (medalPoints >= 20) setUpTo = 0;
+
+        for (int i = 0; i < setUpTo+1; i++){
+            checkboxes[i].setChecked(true);
+            savePref(cbKey+i,true);
+        }
+        for (int i = setUpTo+1; i < checkboxes.length; i++){
+            checkboxes[i].setChecked(false);
+            savePref(cbKey+i, false);
+        }
+
     }
 
     /**
