@@ -19,61 +19,74 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/dev_title1"
+                android:id="@+id/dev_potion_count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Household worth"
-                android:paddingBottom="10dp"/>
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/dev_neg_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"/>
+                <Button
+                    android:id="@+id/dev_pos_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"/>
+            </LinearLayout>
             <CheckBox
                 android:id="@+id/dev_cb0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="75,000"/>
+                android:text="1 potion of youth"/>
             <CheckBox
                 android:id="@+id/dev_cb1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="120,000"/>
+                android:text="2 potions of youth"/>
             <CheckBox
                 android:id="@+id/dev_cb2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="200,000"/>
+                android:text="3 potions of youth"/>
             <CheckBox
                 android:id="@+id/dev_cb3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="320,000"/>
+                android:text="5 potions of youth"/>
             <CheckBox
                 android:id="@+id/dev_cb4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="510,000"/>
+                android:text="8 potions of youth"/>
             <CheckBox
                 android:id="@+id/dev_cb5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="830,000"/>
+                android:text="12 potions of youth"/>
             <CheckBox
                 android:id="@+id/dev_cb6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1,300,000"/>
+                android:text="20 potions of youth"/>
             <CheckBox
                 android:id="@+id/dev_cb7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2,100,000"/>
+                android:text="30 potions of youth"/>
             <CheckBox
                 android:id="@+id/dev_cb8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3,500,000"/>
+                android:text="50 potions of youth"/>
             <CheckBox
                 android:id="@+id/dev_cb9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5,700,000"/>
+                android:text="80 potions of youth"/>
         </LinearLayout>
     </FrameLayout>
 

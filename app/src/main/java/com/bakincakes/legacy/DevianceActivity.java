@@ -5,8 +5,13 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 public class DevianceActivity extends BaseActivity {
@@ -14,6 +19,10 @@ public class DevianceActivity extends BaseActivity {
     private TypedArray navMenuIcons;
     private int NCHECKBOX = 10;
     final CheckBox[] checkboxes = new CheckBox[NCHECKBOX];
+    private int nPotions;
+    final String potionsKey = "potions";
+    final String cbKey = "dev_cb";
+    TextView nPotionsText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,49 +37,58 @@ public class DevianceActivity extends BaseActivity {
 
         set(navMenuTitles, navMenuIcons);
         //set the checkboxes
-        final String cbKey = "dev_cb";
+        nPotions = getIntPref(potionsKey);
+        nPotionsText = (TextView) findViewById(R.id.dev_potion_count_text);
+        nPotionsText.setText("Total Potions: "+nPotions);
+
+        Button negPotions = (Button) findViewById(R.id.dev_neg_button);
+        negPotions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (nPotions > 0) nPotions--;
+                saveIntPref(potionsKey, nPotions);
+                updateTotal();
+            }
+        });
+        Button posPotions = (Button) findViewById(R.id.dev_pos_button);
+        posPotions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nPotions++;
+                saveIntPref(potionsKey, nPotions);
+                updateTotal();
+            }
+        });
+
         for (int i = 0; i < checkboxes.length; i++) {
             checkboxes[i] = (CheckBox) findViewById(getResources().getIdentifier(cbKey + i, "id", getPackageName()));
             checkboxes[i].setChecked(getPref(cbKey + i));
-            checkboxes[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    switch (buttonView.getId()) {
-                        case R.id.dev_cb0:
-                            savePref("dev_cb0", isChecked);
-                            break;
-                        case R.id.dev_cb1:
-                            savePref("dev_cb1", isChecked);
-                            break;
-                        case R.id.dev_cb2:
-                            savePref("dev_cb2", isChecked);
-                            break;
-                        case R.id.dev_cb3:
-                            savePref("dev_cb3", isChecked);
-                            break;
-                        case R.id.dev_cb4:
-                            savePref("dev_cb4", isChecked);
-                            break;
-                        case R.id.dev_cb5:
-                            savePref("dev_cb5", isChecked);
-                            break;
-                        case R.id.dev_cb6:
-                            savePref("dev_cb6", isChecked);
-                            break;
-                        case R.id.dev_cb7:
-                            savePref("dev_cb7", isChecked);
-                            break;
-                        case R.id.dev_cb8:
-                            savePref("dev_cb8", isChecked);
-                            break;
-                        case R.id.dev_cb9:
-                            savePref("dev_cb9", isChecked);
-                            break;
-                        default:
-                            break;
-                    }
-                }
-            });
+            checkboxes[i].setClickable(false);
         }
+    }
+
+    private void updateTotal(){
+        nPotionsText.setText("Total Potions: "+nPotions);
+        int setUpTo = -1;
+        if (nPotions >= 80) setUpTo = 9;
+        else if (nPotions >= 50) setUpTo = 8;
+        else if (nPotions >= 30) setUpTo = 7;
+        else if (nPotions >= 20) setUpTo = 6;
+        else if (nPotions >= 12) setUpTo = 5;
+        else if (nPotions >= 8) setUpTo = 4;
+        else if (nPotions >= 5) setUpTo = 3;
+        else if (nPotions >= 3) setUpTo = 2;
+        else if (nPotions >= 2) setUpTo = 1;
+        else if (nPotions >= 1) setUpTo = 0;
+
+        for (int i = 0; i < setUpTo+1; i++){
+            checkboxes[i].setChecked(true);
+            savePref(cbKey+i,true);
+        }
+        for (int i = setUpTo+1; i < checkboxes.length; i++){
+            checkboxes[i].setChecked(false);
+            savePref(cbKey+i, false);
+        }
+
     }
 }
