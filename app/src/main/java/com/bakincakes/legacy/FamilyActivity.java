@@ -41,8 +41,12 @@ public class FamilyActivity extends BaseActivity {
             checkboxes[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    if (isChecked) famPoints++;
-                    else if (famPoints > 0) famPoints--;
+                    if (isChecked){
+                        famPoints++;
+                    }
+                    else if (famPoints > 0){
+                        famPoints--;
+                    }
                     saveIntPref(famPointsKey, famPoints);
                     switch(buttonView.getId()){
                         case R.id.fam_cb0:
@@ -85,9 +89,5 @@ public class FamilyActivity extends BaseActivity {
             else checkboxes[i].setText("Lotsa Babies ");
         }
         //load each saved preference
-    }
-
-    public int getPoints(){
-        return famPoints;
     }
 }

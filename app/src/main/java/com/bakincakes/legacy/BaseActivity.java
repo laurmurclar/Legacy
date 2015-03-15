@@ -286,4 +286,21 @@ public class BaseActivity extends ActionBarActivity {
         editor.putString(key, value);
         editor.commit();
     }
+
+    public int getAllPoints(){
+        String activityKey = "";
+        String points = "_points";
+        int total = 0;
+        for (int i = 0; i < 1; i++){
+            switch (i){
+                case 0:
+                    activityKey = "fam";
+                    break;
+                default:
+                    break;
+            }
+            total += getIntPref(activityKey+points);
+        }
+        return total;
+    }
 }
