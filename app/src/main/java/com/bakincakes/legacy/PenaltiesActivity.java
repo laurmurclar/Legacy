@@ -45,6 +45,7 @@ public class PenaltiesActivity extends BaseActivity {
         kidsTakenText = (TextView) findViewById(R.id.pen_kids_text);
         kidsTakenText.setText(""+nKidsTaken);
         totalPenaltiesText = (TextView) findViewById(R.id.pen_total_text);
+        updateTotal();
 
         //Set up the ImageButtons
         /*---Power Off */
@@ -122,6 +123,6 @@ public class PenaltiesActivity extends BaseActivity {
 
     private void updateTotal(){
         totalPenalties = nPowerOff + nPlumbingOff + nKidsTaken;
-        totalPenaltiesText.setText("Total Penalties: "+totalPenalties);
+        totalPenaltiesText.setText("Penalties: "+totalPenalties);
     }
 }

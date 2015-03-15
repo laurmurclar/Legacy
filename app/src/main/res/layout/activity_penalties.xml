@@ -21,6 +21,13 @@
                 android:orientation="vertical"
                 android:padding="16dp"
                 >
+                <!-- Total Stuff (set by java variables)-->
+                <TextView
+                    android:id="@+id/pen_total_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Penalties: "
+                    android:textSize="30sp"/>
 
                 <TextView
                     android:id="@+id/pen_title1"
@@ -131,13 +138,7 @@
                         android:text="Times child/Infant taken away by social services"
                         android:paddingBottom="20dp"/>
 
-                    <!-- Total Stuff (set by java variables)-->
-                    <TextView
-                        android:id="@+id/pen_total_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Total Penalties: "
-                        android:textSize="30sp"/>
+
                 </LinearLayout>
 
 
