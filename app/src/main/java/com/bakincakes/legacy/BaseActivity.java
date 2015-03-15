@@ -32,6 +32,8 @@ public class BaseActivity extends ActionBarActivity {
     private ArrayList<NavDrawerItem> navDrawerItems;
     private NavDrawerListAdapter adapter;
 
+    final String pointsKey = "_points";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -289,17 +291,19 @@ public class BaseActivity extends ActionBarActivity {
 
     public int getAllPoints(){
         String activityKey = "";
-        String points = "_points";
         int total = 0;
-        for (int i = 0; i < 1; i++){
+        for (int i = 0; i < 2; i++){
             switch (i){
                 case 0:
                     activityKey = "fam";
                     break;
+                case 1:
+                    activityKey = "cre";
+                    break;
                 default:
                     break;
             }
-            total += getIntPref(activityKey+points);
+            total += getIntPref(activityKey+pointsKey);
         }
         return total;
     }

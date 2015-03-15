@@ -48,6 +48,7 @@ public class FamilyActivity extends BaseActivity {
                         famPoints--;
                     }
                     saveIntPref(famPointsKey, famPoints);
+                    famPointsText.setText("Points: "+ famPoints);
                     switch(buttonView.getId()){
                         case R.id.fam_cb0:
                             savePref("fam_cb0",isChecked);
@@ -82,7 +83,6 @@ public class FamilyActivity extends BaseActivity {
                         default:
                             break;
                     }
-                    famPointsText.setText("Points: "+ famPoints);
                 }
             });
             if (i < 9) checkboxes[i].setText(cbText+(i+1));
