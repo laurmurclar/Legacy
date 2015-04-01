@@ -18,6 +18,7 @@ public class PenaltiesActivity extends BaseActivity {
     int nPowerOff, nPlumbingOff, nKidsTaken, totalPenalties;
     TextView powerText, plumbingText, kidsTakenText, totalPenaltiesText;
     String powerOffKey = "power_off", plumbingOffKey = "plumbing_off", kidsTakenKey = "kids_taken";
+    String penPointsKey = "pen"+pointsKey;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,5 +125,6 @@ public class PenaltiesActivity extends BaseActivity {
     private void updateTotal(){
         totalPenalties = nPowerOff + nPlumbingOff + nKidsTaken;
         totalPenaltiesText.setText("Penalties: "+totalPenalties);
+        saveIntPref(penPointsKey, totalPenalties);
     }
 }

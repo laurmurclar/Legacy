@@ -16,7 +16,9 @@ public class FamilyActivity extends BaseActivity {
     private int NCHECKBOX = 10;
     final CheckBox[] checkboxes = new CheckBox[NCHECKBOX];
     int famPoints;
-    String famPointsKey = "fam_points";
+    public static final int ACT_NO = 1;
+    String famPointsKey = "fam"+pointsKey;
+
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -33,11 +35,11 @@ public class FamilyActivity extends BaseActivity {
         final TextView famPointsText = (TextView) findViewById(R.id.fam_points_text);
         famPointsText.setText("Points: "+famPoints);
         //set the checkboxes
-        final String cbKey = "fam_cb";
+        final String cbKey = keys[ACT_NO]+"_cb";
         String cbText = "Generation ";
         for (int i = 0; i < checkboxes.length; i++){
             checkboxes[i] = (CheckBox) findViewById(getResources().getIdentifier(cbKey+i, "id",getPackageName()));
-            checkboxes[i].setChecked(getPref(cbKey+i));
+            checkboxes[i].setChecked(getBooleanPref(cbKey+i));
             checkboxes[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

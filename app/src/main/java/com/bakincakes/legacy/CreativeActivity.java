@@ -43,7 +43,7 @@ public class CreativeActivity extends BaseActivity {
         String cbText = "Generation ";
         for (int i = 0; i < checkboxes.length; i++){
             checkboxes[i] = (CheckBox) findViewById(getResources().getIdentifier(cbKey+i, "id",getPackageName()));
-            checkboxes[i].setChecked(getPref(cbKey+i));
+            checkboxes[i].setChecked(getBooleanPref(cbKey+i));
             checkboxes[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

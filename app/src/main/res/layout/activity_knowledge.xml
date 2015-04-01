@@ -9,6 +9,9 @@
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
         <!-- Add content here -->
         <LinearLayout
@@ -17,13 +20,32 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp">
-
             <TextView
-                android:id="@+id/kno_title1"
+                android:id="@+id/kno_points_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total number of maxed skills"
-                android:paddingBottom="10dp"/>
+                android:text="Points"
+                android:textSize="30dp"/>
+
+            <TextView
+                android:id="@+id/kno_skill_count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/kno_neg_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"/>
+                <Button
+                    android:id="@+id/kno_pos_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"/>
+            </LinearLayout>
             <CheckBox
                 android:id="@+id/kno_cb0"
                 android:layout_width="wrap_content"
@@ -73,12 +95,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Every skill maxed"/>
-            <CheckBox
-                android:id="@+id/kno_cb9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="All dem"/>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/kno_skills_checkbox_container"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </LinearLayout>
         </LinearLayout>
+        </ScrollView>
     </FrameLayout>
 
     <!-- The navigation drawer -->

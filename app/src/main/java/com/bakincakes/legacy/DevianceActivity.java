@@ -62,7 +62,7 @@ public class DevianceActivity extends BaseActivity {
 
         for (int i = 0; i < checkboxes.length; i++) {
             checkboxes[i] = (CheckBox) findViewById(getResources().getIdentifier(cbKey + i, "id", getPackageName()));
-            checkboxes[i].setChecked(getPref(cbKey + i));
+            checkboxes[i].setChecked(getBooleanPref(cbKey + i));
             checkboxes[i].setClickable(false);
         }
     }

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -32,12 +33,15 @@ public class BaseActivity extends ActionBarActivity {
     private ArrayList<NavDrawerItem> navDrawerItems;
     private NavDrawerListAdapter adapter;
 
+    public String[] keys;
+
     final String pointsKey = "_points";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer);
+        keys = getResources().getStringArray(R.array.key_array);
          //if (savedInstanceState == null) {
          // on first time display view for first nav item
           //   displayView(0);
@@ -254,7 +258,7 @@ public class BaseActivity extends ActionBarActivity {
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
-    public boolean getPref(String key){
+    public boolean getBooleanPref(String key){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         return sharedPreferences.getBoolean(key, false);
     }
@@ -290,20 +294,16 @@ public class BaseActivity extends ActionBarActivity {
     }
 
     public int getAllPoints(){
+        Resources res = getResources();
+        String[] keys = res.getStringArray(R.array.key_array);
         String activityKey = "";
         int total = 0;
-        for (int i = 0; i < 2; i++){
-            switch (i){
-                case 0:
-                    activityKey = "fam";
-                    break;
-                case 1:
-                    activityKey = "cre";
-                    break;
-                default:
-                    break;
+        for (int i = 0; i < keys.length; i++){
+            activityKey = keys[i];
+            if (i == keys.length-2){    //penalties screen
+                total -= getIntPref(activityKey+pointsKey);
             }
-            total += getIntPref(activityKey+pointsKey);
+            else total += getIntPref(activityKey+pointsKey);
         }
         return total;
     }
