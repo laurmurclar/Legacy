@@ -25,6 +25,9 @@ public class PopularityActivity extends BaseActivity {
     int medalPoints, nGold, nSilver, nBronze;
     TextView nGoldText, nSilverText, nBronzeText, nMedalsText;
     final String cbKey = "pop_cb";
+    int popPoints;
+    String popPointsKey = "pop"+pointsKey;
+    TextView popPointsText;
 
 
     @Override
@@ -40,6 +43,9 @@ public class PopularityActivity extends BaseActivity {
                 .obtainTypedArray(R.array.nav_drawer_icons);// load icons from strings.xml
 
         set(navMenuTitles, navMenuIcons);
+        popPoints = getIntPref(popPointsKey);
+        popPointsText = (TextView) findViewById(R.id.pop_points_text);
+        popPointsText.setText("Points: "+popPoints);
 
 //        /* Set up medal stuff */
         nGold = getIntPref("gold_medals");
@@ -137,6 +143,14 @@ public class PopularityActivity extends BaseActivity {
             checkboxes[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked){
+                        popPoints++;
+                    }
+                    else if (popPoints > 0){
+                        popPoints--;
+                    }
+                    saveIntPref(popPointsKey, popPoints);
+                    popPointsText.setText("Points: "+ popPoints);
                     switch (buttonView.getId()) {
                         case R.id.pop_cb0:
                             savePref("pop_cb0", isChecked);
