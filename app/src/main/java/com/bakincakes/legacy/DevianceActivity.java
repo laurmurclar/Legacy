@@ -22,7 +22,9 @@ public class DevianceActivity extends BaseActivity {
     private int nPotions;
     final String potionsKey = "potions";
     final String cbKey = "dev_cb";
-    TextView nPotionsText;
+    TextView nPotionsText, devPointsText;
+    int devPoints;
+    String devPointsKey = "dev"+pointsKey;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,9 @@ public class DevianceActivity extends BaseActivity {
 
         set(navMenuTitles, navMenuIcons);
         //set the checkboxes
+        devPoints = getIntPref(devPointsKey);
+        devPointsText = (TextView) findViewById(R.id.dev_points_text);
+        devPointsText.setText("Points: "+devPoints);
         nPotions = getIntPref(potionsKey);
         nPotionsText = (TextView) findViewById(R.id.dev_potion_count_text);
         nPotionsText.setText("Total Potions: "+nPotions);
@@ -80,15 +85,18 @@ public class DevianceActivity extends BaseActivity {
         else if (nPotions >= 3) setUpTo = 2;
         else if (nPotions >= 2) setUpTo = 1;
         else if (nPotions >= 1) setUpTo = 0;
-
+        devPoints = 0;
         for (int i = 0; i < setUpTo+1; i++){
             checkboxes[i].setChecked(true);
+            devPoints++;
             savePref(cbKey+i,true);
         }
         for (int i = setUpTo+1; i < checkboxes.length; i++){
             checkboxes[i].setChecked(false);
             savePref(cbKey+i, false);
         }
+        saveIntPref(devPointsKey, devPoints);
+        devPointsText.setText("Points: "+devPoints);
 
     }
 }

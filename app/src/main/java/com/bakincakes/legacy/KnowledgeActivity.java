@@ -23,7 +23,6 @@ public class KnowledgeActivity extends BaseActivity {
     final String cbKey = "kno_cb";
     TextView nSkillsText;
     int knoPoints;
-    public static final int ACT_NO = 4;
     String knoPointsKey = "kno"+pointsKey;
     TextView knoPointsText;
 
