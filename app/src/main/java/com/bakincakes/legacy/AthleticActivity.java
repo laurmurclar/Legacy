@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.TextView;
 
 
 public class AthleticActivity extends BaseActivity {
@@ -14,6 +15,9 @@ public class AthleticActivity extends BaseActivity {
     private TypedArray navMenuIcons;
     private int NCHECKBOX = 10;
     final CheckBox[] checkboxes = new CheckBox[NCHECKBOX];
+    int athPoints;
+    String athPointsKey = "ath"+pointsKey;
+    TextView athPointsText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,9 @@ public class AthleticActivity extends BaseActivity {
                 .obtainTypedArray(R.array.nav_drawer_icons);// load icons from strings.xml
 
         set(navMenuTitles, navMenuIcons);
+        athPoints = getIntPref(athPointsKey);
+        athPointsText = (TextView) findViewById(R.id.ath_points_text);
+        athPointsText.setText("Points: "+athPoints);
         final String cbKey = "ath_cb";
         for (int i = 0; i < checkboxes.length; i++) {
             checkboxes[i] = (CheckBox) findViewById(getResources().getIdentifier(cbKey + i, "id", getPackageName()));
@@ -35,6 +42,14 @@ public class AthleticActivity extends BaseActivity {
             checkboxes[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked){
+                        athPoints++;
+                    }
+                    else if (athPoints > 0){
+                        athPoints--;
+                    }
+                    saveIntPref(athPointsKey, athPoints);
+                    athPointsText.setText("Points: "+ athPoints);
                     switch (buttonView.getId()) {
                         case R.id.ath_cb0:
                             savePref("ath_cb0", isChecked);
