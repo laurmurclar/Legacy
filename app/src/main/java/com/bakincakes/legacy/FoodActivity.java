@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.TextView;
 
 
 public class FoodActivity extends BaseActivity {
@@ -16,6 +17,9 @@ public class FoodActivity extends BaseActivity {
     private TypedArray navMenuIcons;
     private int NCHECKBOX = 10;
     final CheckBox[] checkboxes = new CheckBox[NCHECKBOX];
+    int fooPoints;
+    String fooPointsKey = "foo"+pointsKey;
+    TextView fooPointsText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +33,9 @@ public class FoodActivity extends BaseActivity {
                 .obtainTypedArray(R.array.nav_drawer_icons);// load icons from strings.xml
 
         set(navMenuTitles, navMenuIcons);
+        fooPoints = getIntPref(fooPointsKey);
+        fooPointsText = (TextView) findViewById(R.id.foo_points_text);
+        fooPointsText.setText("Points: "+fooPoints);
         //set the checkboxes
         final String cbKey = "foo_cb";
         for (int i = 0; i < checkboxes.length; i++) {
@@ -37,6 +44,14 @@ public class FoodActivity extends BaseActivity {
             checkboxes[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked){
+                        fooPoints++;
+                    }
+                    else if (fooPoints > 0){
+                        fooPoints--;
+                    }
+                    saveIntPref(fooPointsKey, fooPoints);
+                    fooPointsText.setText("Points: "+ fooPoints);
                     switch (buttonView.getId()) {
                         case R.id.foo_cb0:
                             savePref("foo_cb0", isChecked);
