@@ -6,6 +6,7 @@ import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.TextView;
 
 
 public class FortuneActivity extends BaseActivity {
@@ -13,6 +14,9 @@ public class FortuneActivity extends BaseActivity {
     private TypedArray navMenuIcons;
     private int NCHECKBOX = 10;
     final CheckBox[] checkboxes = new CheckBox[NCHECKBOX];
+    int forPoints;
+    String forPointsKey = "for"+pointsKey;
+    TextView forPointsText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,9 @@ public class FortuneActivity extends BaseActivity {
                 .obtainTypedArray(R.array.nav_drawer_icons);// load icons from strings.xml
 
         set(navMenuTitles, navMenuIcons);
+        forPoints = getIntPref(forPointsKey);
+        forPointsText = (TextView) findViewById(R.id.for_points_text);
+        forPointsText.setText("Points: "+forPoints);
         //set the checkboxes
         final String cbKey = "for_cb";
         for (int i = 0; i < checkboxes.length; i++) {
@@ -34,6 +41,14 @@ public class FortuneActivity extends BaseActivity {
             checkboxes[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked){
+                        forPoints++;
+                    }
+                    else if (forPoints > 0){
+                        forPoints--;
+                    }
+                    saveIntPref(forPointsKey, forPoints);
+                    forPointsText.setText("Points: "+ forPoints);
                     switch (buttonView.getId()) {
                         case R.id.for_cb0:
                             savePref("for_cb0", isChecked);
