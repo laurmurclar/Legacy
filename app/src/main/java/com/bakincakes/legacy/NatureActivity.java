@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.TextView;
 
 
 public class NatureActivity extends BaseActivity {
@@ -14,6 +15,9 @@ public class NatureActivity extends BaseActivity {
     private TypedArray navMenuIcons;
     private int NCHECKBOX = 10;
     final CheckBox[] checkboxes = new CheckBox[NCHECKBOX];
+    int natPoints;
+    String natPointsKey = "nat"+pointsKey;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,8 @@ public class NatureActivity extends BaseActivity {
 
         set(navMenuTitles, navMenuIcons);
         //set the checkboxes
+        final TextView natPointsText = (TextView) findViewById(R.id.nat_points_text);
+        natPointsText.setText("Points: "+ natPoints);
         final String cbKey = "nat_cb";
         for (int i = 0; i < checkboxes.length; i++) {
             checkboxes[i] = (CheckBox) findViewById(getResources().getIdentifier(cbKey + i, "id", getPackageName()));
@@ -35,6 +41,14 @@ public class NatureActivity extends BaseActivity {
             checkboxes[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked){
+                        natPoints++;
+                    }
+                    else if (natPoints > 0){
+                        natPoints--;
+                    }
+                    saveIntPref(natPointsKey, natPoints);
+                    natPointsText.setText("Points: "+ natPoints);
                     switch (buttonView.getId()) {
                         case R.id.nat_cb0:
                             savePref("nat_cb0", isChecked);
