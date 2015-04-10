@@ -18,62 +18,11 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <TextView
-                android:id="@+id/lov_title1"
+            <ListView
+                android:id="@+id/lov_spouse_list"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Household worth"
-                android:paddingBottom="10dp"/>
-            <CheckBox
-                android:id="@+id/lov_cb0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="75,000"/>
-            <CheckBox
-                android:id="@+id/lov_cb1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="120,000"/>
-            <CheckBox
-                android:id="@+id/lov_cb2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="200,000"/>
-            <CheckBox
-                android:id="@+id/lov_cb3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="320,000"/>
-            <CheckBox
-                android:id="@+id/lov_cb4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="510,000"/>
-            <CheckBox
-                android:id="@+id/lov_cb5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="830,000"/>
-            <CheckBox
-                android:id="@+id/lov_cb6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1,300,000"/>
-            <CheckBox
-                android:id="@+id/lov_cb7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2,100,000"/>
-            <CheckBox
-                android:id="@+id/lov_cb8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3,500,000"/>
-            <CheckBox
-                android:id="@+id/lov_cb9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5,700,000"/>
+                android:layout_height="wrap_content">
+            </ListView>
         </LinearLayout>
     </FrameLayout>
 

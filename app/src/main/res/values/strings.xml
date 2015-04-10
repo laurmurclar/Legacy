@@ -40,6 +40,7 @@
     <string name="cre_title2">One sim completes two creative aspirations</string>
     <string name="welcome">Welcome to the Tracker!</string>
     <string name="score">Score:</string>
+    <string name="gen">Generation</string>
 
     <string-array name="nav_drawer_items">
         <item>Home</item> <!-- 0 -->
