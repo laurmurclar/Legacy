@@ -52,34 +52,34 @@ public class AthleticActivity extends BaseActivity {
                     athPointsText.setText("Points: "+ athPoints);
                     switch (buttonView.getId()) {
                         case R.id.ath_cb0:
-                            savePref("ath_cb0", isChecked);
+                            saveBooleanPref("ath_cb0", isChecked);
                             break;
                         case R.id.ath_cb1:
-                            savePref("ath_cb1", isChecked);
+                            saveBooleanPref("ath_cb1", isChecked);
                             break;
                         case R.id.ath_cb2:
-                            savePref("ath_cb2", isChecked);
+                            saveBooleanPref("ath_cb2", isChecked);
                             break;
                         case R.id.ath_cb3:
-                            savePref("ath_cb3", isChecked);
+                            saveBooleanPref("ath_cb3", isChecked);
                             break;
                         case R.id.ath_cb4:
-                            savePref("ath_cb4", isChecked);
+                            saveBooleanPref("ath_cb4", isChecked);
                             break;
                         case R.id.ath_cb5:
-                            savePref("ath_cb5", isChecked);
+                            saveBooleanPref("ath_cb5", isChecked);
                             break;
                         case R.id.ath_cb6:
-                            savePref("ath_cb6", isChecked);
+                            saveBooleanPref("ath_cb6", isChecked);
                             break;
                         case R.id.ath_cb7:
-                            savePref("ath_cb7", isChecked);
+                            saveBooleanPref("ath_cb7", isChecked);
                             break;
                         case R.id.ath_cb8:
-                            savePref("ath_cb8", isChecked);
+                            saveBooleanPref("ath_cb8", isChecked);
                             break;
                         case R.id.ath_cb9:
-                            savePref("ath_cb9", isChecked);
+                            saveBooleanPref("ath_cb9", isChecked);
                             break;
                         default:
                             break;

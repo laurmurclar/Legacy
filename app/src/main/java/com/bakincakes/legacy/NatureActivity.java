@@ -51,34 +51,34 @@ public class NatureActivity extends BaseActivity {
                     natPointsText.setText("Points: "+ natPoints);
                     switch (buttonView.getId()) {
                         case R.id.nat_cb0:
-                            savePref("nat_cb0", isChecked);
+                            saveBooleanPref("nat_cb0", isChecked);
                             break;
                         case R.id.nat_cb1:
-                            savePref("nat_cb1", isChecked);
+                            saveBooleanPref("nat_cb1", isChecked);
                             break;
                         case R.id.nat_cb2:
-                            savePref("nat_cb2", isChecked);
+                            saveBooleanPref("nat_cb2", isChecked);
                             break;
                         case R.id.nat_cb3:
-                            savePref("nat_cb3", isChecked);
+                            saveBooleanPref("nat_cb3", isChecked);
                             break;
                         case R.id.nat_cb4:
-                            savePref("nat_cb4", isChecked);
+                            saveBooleanPref("nat_cb4", isChecked);
                             break;
                         case R.id.nat_cb5:
-                            savePref("nat_cb5", isChecked);
+                            saveBooleanPref("nat_cb5", isChecked);
                             break;
                         case R.id.nat_cb6:
-                            savePref("nat_cb6", isChecked);
+                            saveBooleanPref("nat_cb6", isChecked);
                             break;
                         case R.id.nat_cb7:
-                            savePref("nat_cb7", isChecked);
+                            saveBooleanPref("nat_cb7", isChecked);
                             break;
                         case R.id.nat_cb8:
-                            savePref("nat_cb8", isChecked);
+                            saveBooleanPref("nat_cb8", isChecked);
                             break;
                         case R.id.nat_cb9:
-                            savePref("nat_cb9", isChecked);
+                            saveBooleanPref("nat_cb9", isChecked);
                             break;
                         default:
                             break;

@@ -28,6 +28,7 @@ public class LoveActivity extends BaseActivity {
 
         set(navMenuTitles, navMenuIcons);
         //set the checkboxes
+        //TODO set up checkboxes correctly
         final String cbKey = "lov_cb";
         for (int i = 0; i < checkboxes.length; i++) {
             checkboxes[i] = (CheckBox) findViewById(getResources().getIdentifier(cbKey + i, "id", getPackageName()));
@@ -37,34 +38,34 @@ public class LoveActivity extends BaseActivity {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     switch (buttonView.getId()) {
                         case R.id.lov_cb0:
-                            savePref("lov_cb0", isChecked);
+                            saveBooleanPref("lov_cb0", isChecked);
                             break;
                         case R.id.lov_cb1:
-                            savePref("lov_cb1", isChecked);
+                            saveBooleanPref("lov_cb1", isChecked);
                             break;
                         case R.id.lov_cb2:
-                            savePref("lov_cb2", isChecked);
+                            saveBooleanPref("lov_cb2", isChecked);
                             break;
                         case R.id.lov_cb3:
-                            savePref("lov_cb3", isChecked);
+                            saveBooleanPref("lov_cb3", isChecked);
                             break;
                         case R.id.lov_cb4:
-                            savePref("lov_cb4", isChecked);
+                            saveBooleanPref("lov_cb4", isChecked);
                             break;
                         case R.id.lov_cb5:
-                            savePref("lov_cb5", isChecked);
+                            saveBooleanPref("lov_cb5", isChecked);
                             break;
                         case R.id.lov_cb6:
-                            savePref("lov_cb6", isChecked);
+                            saveBooleanPref("lov_cb6", isChecked);
                             break;
                         case R.id.lov_cb7:
-                            savePref("lov_cb7", isChecked);
+                            saveBooleanPref("lov_cb7", isChecked);
                             break;
                         case R.id.lov_cb8:
-                            savePref("lov_cb8", isChecked);
+                            saveBooleanPref("lov_cb8", isChecked);
                             break;
                         case R.id.lov_cb9:
-                            savePref("lov_cb9", isChecked);
+                            saveBooleanPref("lov_cb9", isChecked);
                             break;
                         default:
                             break;

@@ -148,7 +148,6 @@ public class BaseActivity extends ActionBarActivity {
      * Diplaying fragment view for selected nav drawer list item
      * */
     private void displayView(int position) {
-
         switch (position) {
             //Home
             case 0:
@@ -262,7 +261,7 @@ public class BaseActivity extends ActionBarActivity {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         return sharedPreferences.getBoolean(key, false);
     }
-    public void savePref(String key, boolean value){
+    public void saveBooleanPref(String key, boolean value){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(key, value);
@@ -293,6 +292,9 @@ public class BaseActivity extends ActionBarActivity {
         editor.commit();
     }
 
+    /*
+     * Gets the total points from each category and returns the overall total
+     */
     public int getAllPoints(){
         Resources res = getResources();
         String[] keys = res.getStringArray(R.array.key_array);

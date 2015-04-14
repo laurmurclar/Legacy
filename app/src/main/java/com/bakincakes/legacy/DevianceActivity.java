@@ -89,11 +89,11 @@ public class DevianceActivity extends BaseActivity {
         for (int i = 0; i < setUpTo+1; i++){
             checkboxes[i].setChecked(true);
             devPoints++;
-            savePref(cbKey+i,true);
+            saveBooleanPref(cbKey+i,true);
         }
         for (int i = setUpTo+1; i < checkboxes.length; i++){
             checkboxes[i].setChecked(false);
-            savePref(cbKey+i, false);
+            saveBooleanPref(cbKey+i, false);
         }
         saveIntPref(devPointsKey, devPoints);
         devPointsText.setText("Points: "+devPoints);

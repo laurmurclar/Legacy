@@ -54,34 +54,34 @@ public class FoodActivity extends BaseActivity {
                     fooPointsText.setText("Points: "+ fooPoints);
                     switch (buttonView.getId()) {
                         case R.id.foo_cb0:
-                            savePref("foo_cb0", isChecked);
+                            saveBooleanPref("foo_cb0", isChecked);
                             break;
                         case R.id.foo_cb1:
-                            savePref("foo_cb1", isChecked);
+                            saveBooleanPref("foo_cb1", isChecked);
                             break;
                         case R.id.foo_cb2:
-                            savePref("foo_cb2", isChecked);
+                            saveBooleanPref("foo_cb2", isChecked);
                             break;
                         case R.id.foo_cb3:
-                            savePref("foo_cb3", isChecked);
+                            saveBooleanPref("foo_cb3", isChecked);
                             break;
                         case R.id.foo_cb4:
-                            savePref("foo_cb4", isChecked);
+                            saveBooleanPref("foo_cb4", isChecked);
                             break;
                         case R.id.foo_cb5:
-                            savePref("foo_cb5", isChecked);
+                            saveBooleanPref("foo_cb5", isChecked);
                             break;
                         case R.id.foo_cb6:
-                            savePref("foo_cb6", isChecked);
+                            saveBooleanPref("foo_cb6", isChecked);
                             break;
                         case R.id.foo_cb7:
-                            savePref("foo_cb7", isChecked);
+                            saveBooleanPref("foo_cb7", isChecked);
                             break;
                         case R.id.foo_cb8:
-                            savePref("foo_cb8", isChecked);
+                            saveBooleanPref("foo_cb8", isChecked);
                             break;
                         case R.id.foo_cb9:
-                            savePref("foo_cb9", isChecked);
+                            saveBooleanPref("foo_cb9", isChecked);
                             break;
                         default:
                             break;

@@ -51,34 +51,34 @@ public class FortuneActivity extends BaseActivity {
                     forPointsText.setText("Points: "+ forPoints);
                     switch (buttonView.getId()) {
                         case R.id.for_cb0:
-                            savePref("for_cb0", isChecked);
+                            saveBooleanPref("for_cb0", isChecked);
                             break;
                         case R.id.for_cb1:
-                            savePref("for_cb1", isChecked);
+                            saveBooleanPref("for_cb1", isChecked);
                             break;
                         case R.id.for_cb2:
-                            savePref("for_cb2", isChecked);
+                            saveBooleanPref("for_cb2", isChecked);
                             break;
                         case R.id.for_cb3:
-                            savePref("for_cb3", isChecked);
+                            saveBooleanPref("for_cb3", isChecked);
                             break;
                         case R.id.for_cb4:
-                            savePref("for_cb4", isChecked);
+                            saveBooleanPref("for_cb4", isChecked);
                             break;
                         case R.id.for_cb5:
-                            savePref("for_cb5", isChecked);
+                            saveBooleanPref("for_cb5", isChecked);
                             break;
                         case R.id.for_cb6:
-                            savePref("for_cb6", isChecked);
+                            saveBooleanPref("for_cb6", isChecked);
                             break;
                         case R.id.for_cb7:
-                            savePref("for_cb7", isChecked);
+                            saveBooleanPref("for_cb7", isChecked);
                             break;
                         case R.id.for_cb8:
-                            savePref("for_cb8", isChecked);
+                            saveBooleanPref("for_cb8", isChecked);
                             break;
                         case R.id.for_cb9:
-                            savePref("for_cb9", isChecked);
+                            saveBooleanPref("for_cb9", isChecked);
                             break;
                         default:
                             break;

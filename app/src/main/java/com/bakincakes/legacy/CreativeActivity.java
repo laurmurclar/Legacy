@@ -57,34 +57,34 @@ public class CreativeActivity extends BaseActivity {
                     crePointsText.setText("Points: "+ crePoints);
                     switch(buttonView.getId()){
                         case R.id.cre_cb0:
-                            savePref("cre_cb0",isChecked);
+                            saveBooleanPref("cre_cb0",isChecked);
                             break;
                         case R.id.cre_cb1:
-                            savePref("cre_cb1",isChecked);
+                            saveBooleanPref("cre_cb1",isChecked);
                             break;
                         case R.id.cre_cb2:
-                            savePref("cre_cb2",isChecked);
+                            saveBooleanPref("cre_cb2",isChecked);
                             break;
                         case R.id.cre_cb3:
-                            savePref("cre_cb3",isChecked);
+                            saveBooleanPref("cre_cb3",isChecked);
                             break;
                         case R.id.cre_cb4:
-                            savePref("cre_cb4",isChecked);
+                            saveBooleanPref("cre_cb4",isChecked);
                             break;
                         case R.id.cre_cb5:
-                            savePref("cre_cb5",isChecked);
+                            saveBooleanPref("cre_cb5",isChecked);
                             break;
                         case R.id.cre_cb6:
-                            savePref("cre_cb6",isChecked);
+                            saveBooleanPref("cre_cb6",isChecked);
                             break;
                         case R.id.cre_cb7:
-                            savePref("cre_cb7",isChecked);
+                            saveBooleanPref("cre_cb7",isChecked);
                             break;
                         case R.id.cre_cb8:
-                            savePref("cre_cb8",isChecked);
+                            saveBooleanPref("cre_cb8",isChecked);
                             break;
                         case R.id.cre_cb9:
-                            savePref("cre_cb9",isChecked);
+                            saveBooleanPref("cre_cb9",isChecked);
                             break;
                         default:
                             break;
@@ -93,6 +93,5 @@ public class CreativeActivity extends BaseActivity {
             });
             if (i < 9) checkboxes[i].setText(cbText+(i+1));
         }
-        //load each saved preference
     }
 }

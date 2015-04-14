@@ -86,7 +86,7 @@ public class KnowledgeActivity extends BaseActivity {
                     else nSkills--;
                     saveIntPref(skillsKey, nSkills);
                     updateTotal();
-                    savePref("kno_"+checkBox.getText(), isChecked);
+                    saveBooleanPref("kno_" + checkBox.getText(), isChecked);
                 }
             });
             checkboxContainer.addView(checkBox);
@@ -109,11 +109,11 @@ public class KnowledgeActivity extends BaseActivity {
         for (int i = 0; i < setUpTo+1; i++){
             checkboxes[i].setChecked(true);
             knoPoints++;
-            savePref(cbKey+i,true);
+            saveBooleanPref(cbKey + i, true);
         }
         for (int i = setUpTo+1; i < checkboxes.length; i++){
             checkboxes[i].setChecked(false);
-            savePref(cbKey+i, false);
+            saveBooleanPref(cbKey + i, false);
         }
         saveIntPref(knoPointsKey, knoPoints);
         knoPointsText.setText("Points: "+knoPoints);

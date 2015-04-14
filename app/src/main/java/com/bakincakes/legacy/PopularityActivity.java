@@ -153,34 +153,34 @@ public class PopularityActivity extends BaseActivity {
                     popPointsText.setText("Points: "+ popPoints);
                     switch (buttonView.getId()) {
                         case R.id.pop_cb0:
-                            savePref("pop_cb0", isChecked);
+                            saveBooleanPref("pop_cb0", isChecked);
                             break;
                         case R.id.pop_cb1:
-                            savePref("pop_cb1", isChecked);
+                            saveBooleanPref("pop_cb1", isChecked);
                             break;
                         case R.id.pop_cb2:
-                            savePref("pop_cb2", isChecked);
+                            saveBooleanPref("pop_cb2", isChecked);
                             break;
                         case R.id.pop_cb3:
-                            savePref("pop_cb3", isChecked);
+                            saveBooleanPref("pop_cb3", isChecked);
                             break;
                         case R.id.pop_cb4:
-                            savePref("pop_cb4", isChecked);
+                            saveBooleanPref("pop_cb4", isChecked);
                             break;
                         case R.id.pop_cb5:
-                            savePref("pop_cb5", isChecked);
+                            saveBooleanPref("pop_cb5", isChecked);
                             break;
                         case R.id.pop_cb6:
-                            savePref("pop_cb6", isChecked);
+                            saveBooleanPref("pop_cb6", isChecked);
                             break;
                         case R.id.pop_cb7:
-                            savePref("pop_cb7", isChecked);
+                            saveBooleanPref("pop_cb7", isChecked);
                             break;
                         case R.id.pop_cb8:
-                            savePref("pop_cb8", isChecked);
+                            saveBooleanPref("pop_cb8", isChecked);
                             break;
                         case R.id.pop_cb9:
-                            savePref("pop_cb9", isChecked);
+                            saveBooleanPref("pop_cb9", isChecked);
                             break;
                         default:
                             break;
@@ -194,9 +194,9 @@ public class PopularityActivity extends BaseActivity {
         return nBronze+(2*nSilver)+(3*nGold);
     }
 
-    private void updateTotal(){
+    private void updateTotal() {
         medalPoints = totalMedalPoints();
-        nMedalsText.setText("Total Medal Points: "+medalPoints);
+        nMedalsText.setText("Total Medal Points: " + medalPoints);
         int setUpTo = -1;
         if (medalPoints >= 1000) setUpTo = 8;
         else if (medalPoints >= 600) setUpTo = 7;
@@ -208,21 +208,14 @@ public class PopularityActivity extends BaseActivity {
         else if (medalPoints >= 30) setUpTo = 1;
         else if (medalPoints >= 20) setUpTo = 0;
 
-        for (int i = 0; i < setUpTo+1; i++){
+        for (int i = 0; i < setUpTo + 1; i++) {
             checkboxes[i].setChecked(true);
-            savePref(cbKey+i,true);
+            saveBooleanPref(cbKey + i, true);
         }
-        for (int i = setUpTo+1; i < checkboxes.length; i++){
+        for (int i = setUpTo + 1; i < checkboxes.length; i++) {
             checkboxes[i].setChecked(false);
-            savePref(cbKey+i, false);
+            saveBooleanPref(cbKey + i, false);
         }
 
     }
-
-    /**
-     * on button click
-     *
-     * increase/decrease the appropriate medal count, and then save it
-     * then update medalPoints
-     */
 }
