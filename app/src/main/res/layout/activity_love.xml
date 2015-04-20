@@ -18,61 +18,62 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp">
-
-            <ListView
-                android:id="@+id/lov_spouse_list"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            <CheckBox
-                android:id="@+id/lov_cb0"
+            <TextView
+                android:id="@+id/lov_points_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Most expensive fridge and stove fully upgraded"/>
-            <CheckBox
-                android:id="@+id/lov_cb1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Make a Perfect baked alaska"/>
-            <CheckBox
-                android:id="@+id/lov_cb2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Single sim maxes the cooking, gourmet cooking and mixology skills"/>
-            <CheckBox
-                android:id="@+id/lov_cb3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Complete both food aspirations in a single gen"/>
-            <CheckBox
-                android:id="@+id/lov_cb4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Reach the top of both food career branches"/>
-            <CheckBox
-                android:id="@+id/lov_cb5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sim gets fat from your family's cooking"/>
-            <CheckBox
-                android:id="@+id/lov_cb6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Have 6 sims eating at the table (family and/or guests)"/>
-            <CheckBox
-                android:id="@+id/lov_cb7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cook a meal with at least 2 Perfect fresh ingredients"/>
-            <CheckBox
-                android:id="@+id/lov_cb8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Serve Perfect food OR drink during a single date"/>
-            <CheckBox
-                android:id="@+id/lov_cb9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            </ListView>
+                android:text="Points"
+                android:textSize="30dp"/>
+                <CheckBox
+                    android:id="@+id/lov_cb0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 traits"/>
+                <CheckBox
+                    android:id="@+id/lov_cb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6 traits"/>
+                <CheckBox
+                    android:id="@+id/lov_cb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Single sim maxes the cooking, gourmet cooking and mixology skills"/>
+                <CheckBox
+                    android:id="@+id/lov_cb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Complete both food aspirations in a single gen"/>
+                <CheckBox
+                    android:id="@+id/lov_cb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reach the top of both food career branches"/>
+                <CheckBox
+                    android:id="@+id/lov_cb5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim gets fat from your family's cooking"/>
+                <CheckBox
+                    android:id="@+id/lov_cb6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Have 6 sims eating at the table (family and/or guests)"/>
+                <CheckBox
+                    android:id="@+id/lov_cb7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cook a meal with at least 2 Perfect fresh ingredients"/>
+                <CheckBox
+                    android:id="@+id/lov_cb8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Serve Perfect food OR drink during a single date"/>
+                <CheckBox
+                    android:id="@+id/lov_cb9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sample"/>
         </LinearLayout>
     </FrameLayout>
 
